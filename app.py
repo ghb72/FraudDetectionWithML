@@ -112,7 +112,7 @@ st.code('''
     # Visualize the results
     visualize_predictions(fraudulent_transactions, prediction_time)
 ''')
-num_rows = st.slider('Number of rows to query', min_value=1000, max_value=50000, step=1000, value=2000)
+num_rows = st.slider('Number of rows to query', min_value=1000, max_value=25000, step=1000, value=2000)
 if st.button('Run'):
     queried_data = simulate_db_query(num_rows)
     st.write(queried_data.drop(columns='Class'))
